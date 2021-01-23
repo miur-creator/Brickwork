@@ -99,7 +99,7 @@ function brickWork(width, length, ...firstLayers) {
         }
 
         function columnsValidator(length, firstLayers) {
-            let lengthValidationArray = []
+            let lengthValidationArray = [];
 
             firstLayers.forEach(e =>
                 lengthValidationArray.push(e.split(` `).length)
@@ -109,14 +109,14 @@ function brickWork(width, length, ...firstLayers) {
         }
 
         function brickOcurances(arr) {
-            let newArr = arr.slice()
+            let newArr = arr.slice();
 
             const count = {}; // We need this object to validate bricks ocurances
             newArr.forEach(e => count[e] ? count[e]++ : count[e] = 1);
 
-            let countArr = Object.values(count)
+            let countArr = Object.values(count);
 
-            return (countArr.every((val, i, arr) => val === 2))
+            return (countArr.every((val, i, arr) => val === 2));
         }
 
     }
@@ -124,7 +124,7 @@ function brickWork(width, length, ...firstLayers) {
     function resultPrinter(length, result) {
         for (let i = 0; i < result.length; i += length) {
             let singleLine = result.slice(i, i + length);
-            singleLine = singleLine.join(`*`).match(/\d+|\*/g)
+            singleLine = singleLine.join(`*`).match(/\d+|\*/g);
 
             for (let i = 0; i < singleLine.length; i+=2) {
                 if (singleLine[i] == singleLine[i+2]) {
@@ -132,8 +132,8 @@ function brickWork(width, length, ...firstLayers) {
                 }
             }
 
-            singleLine = singleLine.join(``)
-            console.log(singleLine)
+            singleLine = singleLine.join(``);
+            console.log(singleLine);
         }
     }
 
